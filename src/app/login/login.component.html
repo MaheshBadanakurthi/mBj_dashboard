@@ -1,0 +1,30 @@
+<div class="masterDiv">
+  <div >
+    <div class="formDiv">
+      <form action="" [formGroup]="loginForm" (ngSubmit)="userLogin()" class="bg-white rounded shadow p-3" >
+        <div class="text-center mb-3 ">
+          <b class="text-900 text-3xl font-medium mb-3 fs-3">Login here</b>
+        </div>
+
+        <div class="ms-4 ps-5">
+          <label for="username" class="block text-900 font-medium mb-2">User Name</label>
+          <input id="username" type="text" placeholder="Enter User name" pInputText class="w-75 mb-3 form-control"
+            formControlName="userName">
+          <p> <b class="text-danger" *ngIf='loginForm.get("userName")?.touched && loginForm.get("userName")?.invalid'>
+              Please Enter Valid User Name</b> </p>
+          <label for="password" class="block text-900 font-medium mb-2">Password</label>
+          <input id="password" type="password" placeholder="Password" pInputText class="w-75 mb-3 form-control"
+            formControlName="password">
+          <p> <b class="text-danger" *ngIf='loginForm.get("password")?.touched && loginForm.get("password")?.invalid'>
+              Please enter a Valid password </b> </p>
+
+            </div>
+
+          <div class="d-flex pb-4 pt-4 ms-5 ps-5">
+            <button type="submit" class="btn btn-success ms-4" [disabled]="!loginForm.valid"> Submit</button>
+            <button class="btn btn-danger ms-5" type="reset" >Reset</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>

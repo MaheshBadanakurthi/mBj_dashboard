@@ -1,0 +1,118 @@
+<div>
+
+  <header class="bg-black mb-2">
+    <div class="d-flex">
+      <div>
+        <img
+          src="https://carswitch.com/newsroom/wp-content/uploads/2022/05/Meaning-and-History-of-the-Jaguar-Logo-1200-630.jpg"
+          alt="" style="height:50px; width: 150px;">
+      </div>
+      <div class="text-white p-2 mt-1 ms-2">
+        <b>PRICES</b>
+      </div>
+      <div class="text-white p-2 mt-1 ms-2">
+        <b>PURCHASES</b>
+      </div>
+      <div class="text-white p-2 mt-1 ms-2">
+        <b>OWNERS</b>
+      </div>
+      <div class="text-white p-2 mt-1 ms-2">
+        <b>EXPLORE</b>
+      </div>
+    </div>
+  </header>
+
+  <p-carousel [value]="images" [circular]="true">
+    <ng-template let-image pTemplate="item">
+      <img [src]="image.url" [alt]="image.title" class="jaguar">
+      <div class="text-center">
+        <b>{{image.title}}</b>
+      </div>
+    </ng-template>
+  </p-carousel>
+  <div class="flex flex-wrap">
+    <div class=" p-3 mt-4 border-end" style="width: 33%;">
+
+      <span class="material-icons text-6xl text-secondary-500">
+        electric_car
+      </span>
+      <div class="text-900 text-xl mb-3 font-medium"> <a href=""> Reserve Online </a> </div>
+      <span class="text-700 line-height-3"> Reserve Your Jaguar Online. </span>
+    </div>
+    <div class="p-3 mt-4 border-end " style="width: 33%;">
+      <span class="material-icons text-6xl text-secondary-500 ">
+        currency_rupee
+      </span>
+
+      <div class="text-900 text-xl mb-3 font-medium"> <a href=""> View Prices. </a> </div>
+      <span class="text-700 line-height-3"> Have a look here for Prices Online </span>
+    </div>
+    <div class="p-3 mt-4 border-end " style="width: 33%;">
+      <span class="material-icons text-6xl text-secondary-500">
+        notifications_active
+      </span>
+      <i class="icon-driveonroad-jaguar"> </i>
+      <div class="text-900 text-xl mb-3 font-medium"> <a href=""> Get Notify for New Model </a> </div>
+      <span class="text-700 line-height-3"> Get a gentle reminder, when New Model Releases. </span>
+    </div>
+    <!-- For bottom of the UI -->
+
+
+  </div>
+
+  <div>
+    <div class="text-center mb-4">
+      <b class="fs-4"> Our Revenue  </b> <small class="ms-2"> (Last 6  months.)</small>
+    </div>
+    <div class="chart-container">
+      <canvas id="MyChart">{{ chart }}</canvas>
+    </div>
+
+  </div>
+
+  <div>
+    <div>
+      <b class="fs-4 ms-5">Reviews from Investors.</b>
+    </div>
+    <div class="flex flex-wrap">
+      <div class="p-3 mt-4 border-end " style="width: 33%;">
+        <div class="d-flex ">
+          <span class="material-icons text-6xl text-secondary-500 ">account_circle </span>
+          <p class="text-900 text-xl mb-3 font-medium mt-2"> <a href=""> James Anderson </a> </p>
+        </div>
+        <span class="text-700 line-height-3"> Bottoms in the investment world don't end with four-year lows; they end with 10- or 15-year lows. </span>
+      </div>
+      <div class="p-3 mt-4 border-end " style="width: 33%;">
+        <div class="d-flex ">
+          <span class="material-icons text-6xl text-secondary-500 ">account_circle </span>
+          <p class="text-900 text-xl mb-3 font-medium mt-2"> <a href=""> Fhara Vinustriya </a> </p>
+        </div>
+        <span class="text-700 line-height-3"> Invest for the long haul. Don't get too greedy and don't get too scared. </span>
+      </div>
+      <div class="p-3 mt-4 border-end " style="width: 33%;">
+        <div class="d-flex ">
+          <span class="material-icons text-6xl text-secondary-500 ">account_circle </span>
+          <p class="text-900 text-xl mb-3 font-medium mt-2"> <a href=""> Shamshu Nirvavan </a> </p>
+        </div>
+        <span class="text-700 line-height-3"> I will tell you how to become rich. Close the doors. Be fearful when others are greedy. Be greedy when others are fearful. </span>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div>
+    <hr>
+    <div class="surface-section px-2 py-8 md:px-6 lg:px-8 ">
+      <div class="text-700 text-center">
+        <div class="text-blue-600 font-bold mb-3"><i class="pi pi-discord"></i>&nbsp;POWERED BY mBj </div>
+        <div class="text-900 font-bold text-5xl mb-3">Join Our Design Community</div>
+        <div class="text-700 text-2xl mb-5"> Make things better and easier to achieve higher steps which you
+          want to step in. </div>
+        <button pButton pRipple label="Join Now" icon="pi pi-discord"
+          class="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap"></button>
+      </div>
+    </div>
+  </div>
+
+</div>
