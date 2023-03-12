@@ -12,7 +12,6 @@ import { MessagesModule } from 'primeng/messages';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast'
 import { CommonModule } from '@angular/common';
-
 @NgModule({
   declarations: [AppComponent],
   imports: [

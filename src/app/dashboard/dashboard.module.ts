@@ -18,6 +18,7 @@ import { CommonModule } from '@angular/common';
 import { BenzComponent } from './benz/benz.component';
 import { JaguarComponent } from './jaguar/jaguar.component';
 import {CarouselModule} from 'primeng/carousel';
+import {GMapModule} from 'primeng/gmap';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import {CarouselModule} from 'primeng/carousel';
     FormsModule,
     MessagesModule,
     CarouselModule,
+    GMapModule
 
   ],
   exports: [],
