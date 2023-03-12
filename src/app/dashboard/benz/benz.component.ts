@@ -8,7 +8,6 @@ import { AuthService } from 'src/app/service/auth.service';
 })
 export class BenzComponent implements OnInit {
   constructor() {
-    this.deviceId =  this.deviceId = window.navigator.userAgent;
 
   }
   current_date = new Date();
@@ -18,12 +17,7 @@ export class BenzComponent implements OnInit {
   deviceId!: string;
 
   ngOnInit(): void {
-    navigator.geolocation.getCurrentPosition((position) => {
-      this.latitude = position.coords.latitude;
-      this.longitude = position.coords.longitude;
-      console.log(this.latitude);
-      console.log(this.longitude);
-    });
+
   }
 
   public imgUpload(event: any): void {
@@ -32,21 +26,21 @@ export class BenzComponent implements OnInit {
     reader.readAsDataURL(imageFile);
     reader.onload = () => {
       this.imgUrl = reader.result;
-      console.log(this.imgUrl);
+      // console.log(this.imgUrl);
 
     };
+    navigator.geolocation.getCurrentPosition((position) => {
+      this.latitude = position.coords.latitude;
+      this.longitude = position.coords.longitude;
+      console.log(this.latitude);
+      console.log(this.longitude);
+    });
+    this.deviceId =  this.deviceId = window.navigator.userAgent;
+
   }
 
 
-  // getDeviceId(): string {
-  //   const userAgent = navigator.userAgent;
-  //   const match = userAgent.match(/(Android|iPhone|iPod|iPad|Windows Phone|Tablet|Mobile|Silk|Kindle|PlayBook|BB10|Opera Mini|IEMobile)/);
-  //   if (match && match[0]) {
-  //     return match[0];
-  //   } else {
-  //     return 'unknown';
-  //   }
-  // }
+
 
 
 
