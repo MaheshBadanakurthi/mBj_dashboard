@@ -6,29 +6,20 @@
 
 
 <div *ngIf="imgUrl" class="container mt-4">
- <div>
-  <img src={{imgUrl}} alt="" height="250px" width="250px">
-  <p> latitude: <b>{{latitude}}</b>  longitude: <b>{{longitude}}</b> </p>
-  <p> Date <b> {{ current_date | date }} </b> TIme : <b> {{ current_date| date:'h:mm:ss a'}} </b> </p>
-  <p>Device ID: <b>{{deviceId}}</b></p>
- </div>
+  <div>
+    <img src={{imgUrl}} alt="" height="250px" width="250px">
+    <p> latitude: <b>{{latitude}}</b> longitude: <b>{{longitude}}</b> </p>
+    <p> Date <b> {{ current_date | date }} </b> TIme : <b> {{ current_date| date:'h:mm:ss a'}} </b> </p>
+    <p>Device ID: <b>{{deviceId}}</b></p>
+  </div>
 
 </div>
 
+<google-map *ngIf="imgUrl"  height="400px" width="750px" [center]="center" [zoom]="4"   >
+  <map-marker  [position]="center" >
 
+  </map-marker>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+</google-map>
 
 
