@@ -21,6 +21,7 @@ import {CarouselModule} from 'primeng/carousel';
 import {GMapModule} from 'primeng/gmap';
 import { GoogleMapsModule } from '@angular/google-maps'
 
+import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -41,7 +42,12 @@ import { GoogleMapsModule } from '@angular/google-maps'
     MessagesModule,
     CarouselModule,
     GMapModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    NgxMapboxGLModule.withConfig({
+      accessToken:
+        'pk.eyJ1IjoiaGJoamhzIiwiYSI6ImNsNWo3ZGNhODBmODAzY3BqODhuejB3ZmoifQ.RqsEoPXFgDUq1mryoReotg',
+    }),
+
 
   ],
   exports: [],

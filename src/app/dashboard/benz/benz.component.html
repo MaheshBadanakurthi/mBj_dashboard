@@ -1,13 +1,24 @@
-<div class="card container shadow mt-5 ms-3">
+<div  class="d-flex" >
+
+  <div class=" container shadow mt-5 ms-3" style="width:15%" *ngIf="show" >
+    <img src={{imgUrl}} alt="" height="150px" width="150px">
+
+  </div>
+  <div *ngIf="imgUrl" style="width:80%">
+    <google-map height="400px" width="750px" [center]="center" [zoom]="18">
+      <map-marker [position]="center">
+      </map-marker>
+    </google-map>
+  </div>
+</div>
+<div>
   <b class="ms-3 mt-2">Getting latitude, logitude,date, time and device ID. </b>
   <p class="ms-3">All details will come after image has uploaded.</p>
   <input type="file" accept="image/*" (change)="imgUpload($event)" class="ms-3 mb-3">
 </div>
 
-
 <div *ngIf="imgUrl" class="container mt-4">
   <div>
-    <img src={{imgUrl}} alt="" height="250px" width="250px">
     <p> latitude: <b>{{latitude}}</b> longitude: <b>{{longitude}}</b> </p>
     <p> Date <b> {{ current_date | date }} </b> TIme : <b> {{ current_date| date:'h:mm:ss a'}} </b> </p>
     <p>Device ID: <b>{{deviceId}}</b></p>
@@ -15,11 +26,13 @@
 
 </div>
 
-<google-map *ngIf="imgUrl"  height="400px" width="750px" [center]="center" [zoom]="4"   >
-  <map-marker  [position]="center" >
-
-  </map-marker>
-
-</google-map>
 
 
+
+<div class="card">
+  <b> Map box implementation. </b>
+  <input type="file" accept="image/*" (change)="imageUploaded($event)">
+</div>
+<div class="map" id="map" style="height:500px; width: 960px;" *ngIf="imgForLoc" >
+
+</div>

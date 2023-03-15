@@ -12,7 +12,8 @@ import { MessagesModule } from 'primeng/messages';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast'
 import { CommonModule } from '@angular/common';
-import { GoogleMapsModule } from '@angular/google-maps'
+import { GoogleMapsModule } from '@angular/google-maps';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
